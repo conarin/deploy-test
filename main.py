@@ -13,6 +13,8 @@ class MyClient(discord.Client):
 
         if message.content == 'ping':
             await message.channel.send('pong')
+        elif message.content == 'neko':
+            await message.channel.send('にゃーん')
 
 
 client = MyClient()
