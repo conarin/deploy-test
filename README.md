@@ -1,0 +1,3 @@
+deploy-test
+
+pushされたらGitHub ActionsでCloudflare Tunnelを介したSSH接続をして自動デプロイするテスト。
