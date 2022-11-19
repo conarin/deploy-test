@@ -30,4 +30,4 @@ jobs:
       - name: Deploy Over SSH
         env:
           USER: ${{ secrets.SSH_USER }}
-        run: ssh target "bash /home/${USER}/deploy.sh"
+        run: ssh target "bash /home/$USER/deploy.sh"
