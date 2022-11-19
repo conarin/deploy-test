@@ -28,4 +28,6 @@ jobs:
               ProxyCommand ./cloudflared access ssh --hostname %h --log-level warn --id ${{ secrets.CF_ACCESS_CLIENT_ID }} --secret ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
       
       - name: Deploy Over SSH
-        run: ssh target "bash /home/${{ secrets.SSH_USER }}/deploy.sh"
+        env:
+          USER: ${{ secrets.SSH_USER }}
+        run: ssh target "bash /home/${USER}/deploy.sh"
